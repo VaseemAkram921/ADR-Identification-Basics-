@@ -1,36 +1,54 @@
-## ADR Reporting & Documentation — Case Report
+Causality Assessment of Drug Reactions
 
-### 1. Patient Information
-| Field | Value |
-|---|---|
-| Patient Initials | J.D. |
-| Age / Gender | 45 / Female |
+## Project Overview
 
-### 2. Suspected Medicine
-| Field | Value |
-|---|---|
-| Medicine Name | Amoxicillin |
-| Dose | 500 mg |
-| Route | Oral |
-| Start Date | 2026-09-08 |
+This project demonstrates **causality assessment** of an adverse drug reaction &#40;ADR&#41; using standard pharmacovigilance principles\.
 
-### 3. Adverse Reaction
-| Field | Value |
-|---|---|
-| Reaction / Event | Rash, itching, nausea, and dizziness |
-| Date of Onset | 2026-09-10 |
-| Date of Recovery | Ongoing — symptoms persist at time of report |
-| Outcome | Not yet recovered |
-| Seriousness | Non-serious |
+The objective is to evaluate the relationship between a suspected drug and an observed adverse reaction by reviewing:
 
-### 4. Reporter Information
-| Field | Value |
-|---|---|
-| Name | Vaseem Akram |
-| Designation | Intern |
-| Contact | — |
+- Patient information
+- Suspected drug
+- Adverse reaction
+- Temporal relationship
+- Dechallenge
+- Rechallenge
+- Alternative causes
 
-### Summary
-This report documents a suspected adverse drug reaction (ADR) in a 45-year-old female patient following administration of oral amoxicillin 500 mg. Symptoms — rash, itching, nausea, and dizziness — began approximately two days after starting the medication and have persisted, indicating a probable temporal association with the drug. Given amoxicillin's well-documented history of hypersensitivity reactions, this case is classified as a probable ADR. The reaction is currently non-serious, but ongoing monitoring is recommended, along with documentation of a penicillin allergy in the patient's medical record.
+##  Case Study
 
+|Parameter       |Details                          |
+|----------------|---------------------------------|
+|Patient         |45-year-old female               |
+|Suspected Drug  |Amoxicillin                      |
+|Adverse Reaction|Skin rash                        |
+|Onset           |3 days after starting the drug   |
+|Outcome         |Recovered after stopping the drug|
 
+## Causality Assessment
+
+### 1\. Temporal Relationship
+
+The skin rash occurred **3 days after starting amoxicillin**, supporting a possible relationship between the drug and reaction\.
+
+### 2\. Dechallenge
+
+The patient **recovered after stopping amoxicillin**\. This positive dechallenge supports a causal relationship\.
+
+### 3\. Rechallenge
+
+No rechallenge information is provided\. Therefore, the reaction was **not confirmed by re\-exposure**\.
+
+### 4\. Alternative Causes
+
+No information about alternative causes is provided in the case\. Therefore, alternative causes cannot be completely excluded\.
+
+##  Conclusion
+
+**Causality Classification: PROBABLE**
+
+The relationship between amoxicillin and the skin rash is considered **Probable** based on the available information because:
+
+- There is a reasonable temporal relationship\.
+- The reaction improved after withdrawal of the suspected drug\.
+- No rechallenge was reported\.
+- Alternative causes cannot be completely ruled out\.
