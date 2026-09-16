@@ -1,42 +1,72 @@
-# Severity & Case Classification — Pharmacovigilance Analysis
+# Individual Case Safety Report (ICSR)
 
-## Task Description
-Classify adverse drug reactions based on seriousness and expectedness. Evaluate multiple cases and determine their clinical impact using pharmacovigilance guidelines.
 
-## Pharmacovigilance Guidelines Used
 
-**Seriousness** — An adverse event is classified as **Serious** if it results in:
-- Death
-- A life-threatening condition
-- Hospitalization (or prolongation of existing hospitalization)
-- Persistent or significant disability
-- A congenital anomaly
-- Another medically important condition
 
-Otherwise, it is classified as **Non-serious**.
 
-**Expectedness** — An adverse event is classified as:
-- **Expected** — consistent with the drug's approved product information (label / SmPC) or known pharmacological characteristics of the drug
-- **Unexpected** — not consistent with the drug's label or known characteristics
+## Case Information
 
-## Case Analysis
+| Field | Value |
+|---|---|
+| Case No. | 01 |
+| Suspected Drug | Amoxicillin |
+| Adverse Reaction | Skin rash, itching |
+| Seriousness | Non-serious |
+| Expectedness | Expected |
 
-| Case | Drug | Adverse Reaction | Seriousness | Expectedness | Rationale |
-|------|------|-------------------|--------------|----------------|-----------|
-| 01 | Amoxicillin | Skin rash, itching | **Non-serious** | **Expected** | Mild cutaneous hypersensitivity reactions (rash, pruritus) are common, well-documented adverse effects listed on the amoxicillin label. No hospitalization, disability, or life-threatening feature present. |
-| 02 | Ibuprofen | Gastrointestinal bleeding requiring hospitalization | **Serious** | **Expected** | Meets the seriousness criterion via hospitalization. GI bleeding is a well-recognized, labeled risk of NSAIDs, including ibuprofen, particularly with prolonged or high-dose use. |
-| 03 | Metformin | Lactic acidosis | **Serious** | **Expected** | Lactic acidosis is a rare but life-threatening/medically important condition, satisfying the seriousness criterion. It is a well-known, labeled (boxed-warning-level) risk associated with metformin, especially in renal impairment. |
+---
 
-## Summary
+## 01 — ADR Identification
 
-| Category | Cases |
-|----------|-------|
-| Serious | 02 (Ibuprofen), 03 (Metformin) |
-| Non-serious | 01 (Amoxicillin) |
-| Expected | 01, 02, 03 |
-| Unexpected | None |
+**Is this an Adverse Drug Reaction (ADR)?** Yes.
 
-All three reactions in this dataset are **expected** per current product labeling; two of the three (Ibuprofen, Metformin) meet **seriousness** criteria due to hospitalization or life-threatening potential, while the Amoxicillin case remains non-serious.
+- **Reaction:** Skin rash with itching (pruritus)
+- **Type:** Type B (idiosyncratic/hypersensitivity) reaction — a well-documented class effect of penicillin-class antibiotics such as amoxicillin.
+- **Seriousness check:** Not fatal, not life-threatening, no hospitalization, no persistent disability, no congenital anomaly → **Non-serious**.
+- **Expectedness check:** Skin rash/itching is a listed, known adverse reaction on the amoxicillin product label/SmPC → **Expected**.
+
+---
+
+## 02 — Reporting (ICSR Summary)
+
+| ICSR Field | Detail |
+|---|---|
+| Suspected Medicine | Amoxicillin |
+| Adverse Reaction | Skin rash, itching |
+| Seriousness | Non-serious |
+| Expectedness | Expected |
+| Action Taken | Drug discontinuation recommended |
+| Reporter Type | Drug Safety Associate (case evaluation) |
+
+**Narrative:**
+A case reported skin rash and itching associated with amoxicillin use. Based on evaluation, the reaction is non-serious in nature and consistent with the known adverse reaction profile of the drug (expected event).
+
+---
+
+## 03 — Causality Assessment
+
+| Criterion | Finding |
+|---|---|
+| Temporal Relationship | Consistent with known onset pattern for penicillin hypersensitivity |
+| Known Association | Skin rash/itching is a documented ADR for amoxicillin |
+| Alternative Causes | None reported |
+
+**Classification: Probable** — supported by known drug association and no alternative explanation identified; rechallenge data not available to confirm Certain.
+
+---
+
+## 04 — Classification Summary
+
+| Attribute | Result |
+|---|---|
+| Seriousness | ✅ Non-serious |
+| Expectedness | ✅ Expected |
+| Regulatory Reporting Pathway | Routine periodic reporting (PSUR/PBRER) — expedited reporting not required since the event is non-serious |
+
+---
+
+*Status: Approved*
+
 
 
 
