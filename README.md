@@ -1,54 +1,43 @@
-Causality Assessment of Drug Reactions
+# Severity & Case Classification — Pharmacovigilance Analysis
 
-## Project Overview
+## Task Description
+Classify adverse drug reactions based on seriousness and expectedness. Evaluate multiple cases and determine their clinical impact using pharmacovigilance guidelines.
 
-This project demonstrates **causality assessment** of an adverse drug reaction &#40;ADR&#41; using standard pharmacovigilance principles\.
+## Pharmacovigilance Guidelines Used
 
-The objective is to evaluate the relationship between a suspected drug and an observed adverse reaction by reviewing:
+**Seriousness** — An adverse event is classified as **Serious** if it results in:
+- Death
+- A life-threatening condition
+- Hospitalization (or prolongation of existing hospitalization)
+- Persistent or significant disability
+- A congenital anomaly
+- Another medically important condition
 
-- Patient information
-- Suspected drug
-- Adverse reaction
-- Temporal relationship
-- Dechallenge
-- Rechallenge
-- Alternative causes
+Otherwise, it is classified as **Non-serious**.
 
-##  Case Study
+**Expectedness** — An adverse event is classified as:
+- **Expected** — consistent with the drug's approved product information (label / SmPC) or known pharmacological characteristics of the drug
+- **Unexpected** — not consistent with the drug's label or known characteristics
 
-|Parameter       |Details                          |
-|----------------|---------------------------------|
-|Patient         |45-year-old female               |
-|Suspected Drug  |Amoxicillin                      |
-|Adverse Reaction|Skin rash                        |
-|Onset           |3 days after starting the drug   |
-|Outcome         |Recovered after stopping the drug|
+## Case Analysis
 
-## Causality Assessment
+| Case | Drug | Adverse Reaction | Seriousness | Expectedness | Rationale |
+|------|------|-------------------|--------------|----------------|-----------|
+| 01 | Amoxicillin | Skin rash, itching | **Non-serious** | **Expected** | Mild cutaneous hypersensitivity reactions (rash, pruritus) are common, well-documented adverse effects listed on the amoxicillin label. No hospitalization, disability, or life-threatening feature present. |
+| 02 | Ibuprofen | Gastrointestinal bleeding requiring hospitalization | **Serious** | **Expected** | Meets the seriousness criterion via hospitalization. GI bleeding is a well-recognized, labeled risk of NSAIDs, including ibuprofen, particularly with prolonged or high-dose use. |
+| 03 | Metformin | Lactic acidosis | **Serious** | **Expected** | Lactic acidosis is a rare but life-threatening/medically important condition, satisfying the seriousness criterion. It is a well-known, labeled (boxed-warning-level) risk associated with metformin, especially in renal impairment. |
 
-### 1\. Temporal Relationship
+## Summary
 
-The skin rash occurred **3 days after starting amoxicillin**, supporting a possible relationship between the drug and reaction\.
+| Category | Cases |
+|----------|-------|
+| Serious | 02 (Ibuprofen), 03 (Metformin) |
+| Non-serious | 01 (Amoxicillin) |
+| Expected | 01, 02, 03 |
+| Unexpected | None |
 
-### 2\. Dechallenge
+All three reactions in this dataset are **expected** per current product labeling; two of the three (Ibuprofen, Metformin) meet **seriousness** criteria due to hospitalization or life-threatening potential, while the Amoxicillin case remains non-serious.
 
-The patient **recovered after stopping amoxicillin**\. This positive dechallenge supports a causal relationship\.
 
-### 3\. Rechallenge
 
-No rechallenge information is provided\. Therefore, the reaction was **not confirmed by re\-exposure**\.
 
-### 4\. Alternative Causes
-
-No information about alternative causes is provided in the case\. Therefore, alternative causes cannot be completely excluded\.
-
-##  Conclusion
-
-**Causality Classification: PROBABLE**
-
-The relationship between amoxicillin and the skin rash is considered **Probable** based on the available information because:
-
-- There is a reasonable temporal relationship\.
-- The reaction improved after withdrawal of the suspected drug\.
-- No rechallenge was reported\.
-- Alternative causes cannot be completely ruled out\.
